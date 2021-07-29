@@ -11,15 +11,36 @@
 <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Padauk&display=swap" rel="stylesheet">
         <h1 class="judul">Happy birthday Rhaffa Putra W. &#128522!</h1>
         <audio autoplay>
-            <source src="./videoplayback.mp3" type="audio/mpeg">
+            <source src="./videoplayback.mp3" type="audio/mp3">
         </audio>
         <img class="gif" src="./giphy.gif" alt="">
         <br>
         <div class="alert">
-            <button class="button1" type="button" onclick="swal.fire('Hai, Rhaffa &#128513!')">Klik ini</button><br>
-            <button class="button2" type="button" onclick="swal.fire('Selamat ulang tahun &#x1F389 &#x1F38A &#x1F388')">Abis itu ini</button><br>
-            <button class="button3" type="button" onclick="swal.fire('Semoga panjang umur, rajin ibadah, sehat selalu, patuh kepada orangtua, bisa membahagiakan orangtua nanti &#x1F604')">Terus ini</button><br>
-            <button class="button4" type="button" onclick="swal.fire('Oke, dadah! birthday card ada di bawah ya &#x1F606')">Terakhir dah</button><br>
+            <button class="button1" id="bt1" value = "0" onclick="change()">Klik disiniii.</button> <br>
+            <script>
+                function change() // no ';' here
+                {
+                    var elem = document.getElementById("bt1");
+                    if (elem.value=="0") {
+                        elem.value = "1";
+                        elem.innerText = "Abis itu ini yaa";
+                        swal.fire('Hai, Rhaffa &#128513!');
+                    } else if (elem.value=="1") {
+                        elem.value = "2";
+                        elem.innerText = "Terus ini yaa";
+                        swal.fire('Selamat ulang tahun &#x1F389 &#x1F38A &#x1F388');
+                    } else if (elem.value=="2") {
+                        elem.value = "3";
+                        elem.innerText = "Terakhir dahh";
+                        swal.fire('Semoga panjang umur, rajin ibadah, sehat selalu, patuh kepada orangtua, bisa membahagiakan orangtua nanti &#x1F604');
+                    } else if (elem.value=="3") {
+                        elem.value = "4";
+                        swal.fire('Oke, dadah! birthday card ada di bawah ya &#x1F606');
+                        elem.innerText = "Makasiiih banyakk yaa";
+                    } 
+                    else elem.innerText = "Makasiiih banyakk yaa";
+                }
+                </script>
             <a href="./Untitled design.png">Download Birthday Card</a>
             <script src="dist/sweetalert2.all.min.js"></script>
         </div>
